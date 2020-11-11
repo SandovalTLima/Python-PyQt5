@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QToolTip, QLabel
-
+from PyQt5 import QtGui # trabalhar com imagens
 class Janela (QMainWindow):
     def __init__(self):
         super().__init__()
@@ -28,6 +28,11 @@ class Janela (QMainWindow):
         self.label1.move(80, 20)
         self.label1.setStyleSheet('QLabel {font:bold;font-size:30px;color:"red"}')
         self.label1.resize(800,50)
+        #Label com imagem
+        self.ok = QLabel(self)
+        self.ok.move(50,400)
+        self.ok.resize(400,400)
+        self.ok.move(200, 65)
         #carregando a janela
         self.CarregarJanela()
 
@@ -38,11 +43,13 @@ class Janela (QMainWindow):
     def botao1_click(self):
         #print ("Botão Ok foi clicado")
         self.label1.setText("O botão OK foi clicado")
-        self.label1.setStyleSheet('QLabel {font:bold;font-size:30px;color:"blue"}')
+        self.ok.setPixmap(QtGui.QPixmap('.\icons\ok.png')) #usando imagem na label
+
     def botao2_click(self):
         #print ("Botão Cancelar foi clicado")
         self.label1.setText("O botão Cancelar foi clicado")
         self.label1.setStyleSheet('QLabel {font:bold;font-size:30px;color:"orange"}')
+        self.ok.setPixmap(QtGui.QPixmap('.\icons\erro.png')) #usando imagem na label
 
 
 aplicacao = QApplication(sys.argv)
