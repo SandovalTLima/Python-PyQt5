@@ -20,3 +20,7 @@ Aula 5:
 Imagens
 Usando imagens nas lables
 Trocando a imagem de acordo com as ações dos botões
+
+Aula 6:
+Caixa de texto
+manipulando texto
