@@ -24,3 +24,8 @@ Trocando a imagem de acordo com as ações dos botões
 Aula 6:
 Caixa de texto
 manipulando texto
+
+Aula 7:
+Instalando QT Designer
+Criando a primeira janela com QT Designer
+Transformando de arqui .ui para .py, pelo cmd, navegar até a pasta, pyuic5 -x nomeArquivo.extensão -o nomeArquivoFinal.py
